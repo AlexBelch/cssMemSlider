@@ -46,21 +46,106 @@ body {
 }
 
 .container {
-  width: 761px;
-  height: 417px;
+  width: 750px;
   margin: 6% auto;
+  background-color: var(--color-dark-3xl);
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  gap: 20px;
+  padding: 15px;
+}
+
+.container > input {
+  display: none;
+}
+
+.container > .memslider-container-image {
+  width: 100%;
+  height: 450px;
+  overflow: hidden;
+  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.4);
+}
+
+.container > .memslider-container-image > .memslider-wrapper-image {
+  display: flex;
+  width: 5500px;
+  transition: all 0.5s;
+}
+
+.container > .memslider-container-image > .memslider-wrapper-image > .image {
+  width: 750px;
+  height: 450px;
+  object-fit: cover;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+.container > .memslider-container-image > .memslider-wrapper-image > .image1 {
+  background-image: url("./assets/images/1.png");
+}
+.container > .memslider-container-image > .memslider-wrapper-image > .image2 {
+  background-image: url("./assets/images/2.png");
+}
+.container > .memslider-container-image > .memslider-wrapper-image > .image3 {
+  background-image: url("./assets/images/3.jpeg");
+}
+.container > .memslider-container-image > .memslider-wrapper-image > .image4 {
+  background-image: url("./assets/images/4.png");
+}
+.container > .memslider-container-image > .memslider-wrapper-image > .image5 {
+  background-image: url("./assets/images/5.jpeg");
+}
+.container > .memslider-container-image > .memslider-wrapper-image > .image6 {
+  background-image: url("./assets/images/6.jpeg");
+}
+.container > .memslider-container-image > .memslider-wrapper-image > .image7 {
+  background-image: url("./assets/images/7.png");
+}
+
+.memslider-container-text {
+  width: 400px;
+  height: 50px;
+  overflow: hidden;
+}
+
+.memslider-container-text > .memslider-wrapper-text {
+  width: 700%;
+  display: flex;
+  transition: all 1s;
+}
+
+.memslider-container-text > .memslider-wrapper-text > .text {
+  width: 100%;
+  font-family: var(--fontArial);
+  font-size: var(--font-size3);
+  color: var(--color-primary);
+}
+
+#slide1:checked ~ .memslider-container-text .memslider-wrapper-text {
+  margin-left: 0;
+}
+#slide2:checked ~ .memslider-container-text .memslider-wrapper-text {
+  margin-left: -100%;
+}
+#slide3:checked ~ .memslider-container-text .memslider-wrapper-text {
+  margin-left: -200%;
+}
+#slide4:checked ~ .memslider-container-text .memslider-wrapper-text {
+  margin-left: -300%;
+}
+#slide5:checked ~ .memslider-container-text .memslider-wrapper-text {
+  margin-left: -400%;
+}
+#slide6:checked ~ .memslider-container-text .memslider-wrapper-text {
+  margin-left: -500%;
+}
+#slide7:checked ~ .memslider-container-text .memslider-wrapper-text {
+  margin-left: -600%;
 }
 
 .container > .memslider-container-panel {
-  margin: 25px 0;
   display: flex;
-}
-
-.container > .memslider-container-panel > input {
-  display: none;
 }
 
 .container > .memslider-container-panel > label {
@@ -84,6 +169,37 @@ body {
 
 .container > .memslider-container-panel > label:hover span {
   background-color: var(--color-light-l);
+}
+
+#slide1:checked ~ .memslider-container-panel .label1 span,
+#slide2:checked ~ .memslider-container-panel .label2 span,
+#slide3:checked ~ .memslider-container-panel .label3 span,
+#slide4:checked ~ .memslider-container-panel .label4 span,
+#slide5:checked ~ .memslider-container-panel .label5 span,
+#slide6:checked ~ .memslider-container-panel .label6 span,
+#slide7:checked ~ .memslider-container-panel .label7 span {
+  background: transparent;
+  border: 2px solid var(--color-primary);
+}
+
+#slide1:checked ~ .memslider-container-panel .label1:hover span,
+#slide2:checked ~ .memslider-container-panel .label2:hover span,
+#slide3:checked ~ .memslider-container-panel .label3:hover span,
+#slide4:checked ~ .memslider-container-panel .label4:hover span,
+#slide5:checked ~ .memslider-container-panel .label5:hover span,
+#slide6:checked ~ .memslider-container-panel .label6:hover span,
+#slide7:checked ~ .memslider-container-panel .label7:hover span {
+  border-color: var(--color-light-l);
+}
+
+#slide1:active ~ .memslider-container-panel .label1 span:hover,
+#slide2:active ~ .memslider-container-panel .label2 span:hover,
+#slide3:active ~ .memslider-container-panel .label3 span:hover,
+#slide4:active ~ .memslider-container-panel .label4 span:hover,
+#slide5:active ~ .memslider-container-panel .label5 span:hover,
+#slide6:active ~ .memslider-container-panel .label6 span:hover,
+#slide7:active ~ .memslider-container-panel .label7 span:hover {
+  background-color: rgb(207, 206, 206);
 }
 
 .pets-content > .slider {
